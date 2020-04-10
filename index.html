@@ -9,13 +9,11 @@
     OneSignal.init({
       appId: "1f53eaa8-deab-4f8e-801c-8f217b8c2ecd",
     });
+	  OneSignal.on('notificationDisplay', function(event) {
 	dem++;
 		document.getElementById("display").innerHTML = dem;
   });
-	Notification.onshow = function() { 
-		dem++;
-		document.getElementById("display").innerHTML = dem;
-	};
+  });
 	function restart() {
 		dem = 0;
 		document.getElementById("display").innerHTML = dem;
