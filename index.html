@@ -9,12 +9,23 @@
       appId: "1f53eaa8-deab-4f8e-801c-8f217b8c2ecd",
     });
   });
+	var dem = 0;
+	Notification.onshow = function() { 
+		dem++;
+		document.getElementById("display").innerHTML = dem;
+	};
+	function restart() {
+		dem = 0;
+		document.getElementById("display").innerHTML = dem;
+	}
+  
 </script>
 </head>
 <body>
 
-<h1>OneSignal</h1>
-
+<h1>OneSignal</h1><h2>
+<div id="display">0</div></h2>
+<button onclick='restart()'>Restart</button>
 <p>OneSignal</p>
 
 </body>
